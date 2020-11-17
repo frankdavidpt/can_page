@@ -15,9 +15,11 @@ header {
     width: 100vw;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 100;
     background: black;
     justify-content: space-around;
+    height: 180px;
+}     
 }
 .logo {
     height: 165px;
@@ -27,6 +29,7 @@ header {
 nav {
     width: 600px;
     height: 165px;
+   
     
 }
 .list_nav {
@@ -39,9 +42,17 @@ nav {
     font-size: larger;
 }
 .lista_n {
-    color: white;
-    text-decoration: none;
+background-color: black;
+color: white;
+text-decoration: none;
 } 
+.lista_n:hover {
+    background-color: darkgrey;
+    color: black;
+    width: 50px;
+    height: 30px;
+    text-decoration: none;
+}
 .portada {
     position: relative;;
     /* border: 2px  solid white; */
@@ -51,10 +62,10 @@ nav {
     display: flex;
     justify-content: center;
 }
-.img_port {
+/* .img_port {
     /* margin-left: 90px; */
 
-}
+} */
 .biografia {
     margin: 30px 154px;
     width: 70vw;
@@ -86,3 +97,80 @@ nav {
     width: 25vw;
     height: 35vh;
 }
+.alb6:hover {
+    width: 35vw;
+    height: 45vh;
+    border: 3px inset rgb(37, 35, 35);
+    box-shadow: inset 5em 1em rgb(5, 5, 5);
+}
+.alb1:hover {
+    width: 35vw;
+    height: 45vh;
+    border: 3px inset rgb(37, 35, 35);
+    box-shadow: inset 5em 1em rgb(5, 5, 5);
+}
+.alb2:hover {
+    width: 35vw;
+    height: 45vh;
+    border: 3px inset rgb(37, 35, 35);
+    box-shadow: inset 5em 1em rgb(5, 5, 5);
+}
+.alb3:hover {
+    width: 35vw;
+    height: 45vh;
+    border: 3px inset rgb(37, 35, 35);
+    box-shadow: inset 5em 1em rgb(5, 5, 5);
+}
+.alb4:hover {
+    width: 35vw;
+    height: 45vh;
+    border: 3px inset rgb(37, 35, 35);
+    box-shadow: inset 5em 1em rgb(5, 5, 5);
+}
+.alb5:hover {
+    width: 35vw;
+    height: 45vh;
+    border: 3px inset rgb(37, 35, 35);
+    box-shadow: inset 5em 1em rgb(5, 5, 5);
+}
+/* .container {
+    background: black;
+    
+    height: 290px;
+} */
+footer {
+    
+    display: flex;
+    justify-content: space-between;
+}
+footer p {
+    font-size: 30px;
+    margin: 10px 0px 5px 50px;
+}
+.footer_span {
+    font-size: 20px;
+    margin: 10px 50px 5px 0px;
+    width: 30vw;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+@media screen and (max-width: 320px) {
+    header {
+        position: fixed;
+        display: flex;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background: black;
+        height: 180px;
+        justify-content: center;
+    }
+    .logo {
+        margin: 10px 0 0 20px;
+        
+    }
+    .list_nav {
+        display: none;
+    }
