@@ -20,17 +20,15 @@ header {
     justify-content: space-around;
     height: 180px;
 }     
-}
-.logo {
-    height: 165px;
-    width: 200px;
-    margin: 15px 0 0 15px;
-}
 nav {
     width: 600px;
-    height: 165px;
-   
-    
+    height: 165px;    
+}
+#me_nu {
+    display: none;
+}
+[class^="icon-menu"], [class*=" icon-menu"] {
+    display: none;
 }
 .list_nav {
     list-style: none;
@@ -53,11 +51,13 @@ nav {
     height: 30px;
     text-decoration: none;
 }
-.nav-menu {
-    display: none;
+.logo {
+    height: 165px;
+    width: 200px;
+    margin: 15px 0 0 15px;
 }
 .portada {
-    position: relative;;
+    position: relative;
     /* border: 2px  solid white; */
     margin-top: 200px;
     /* width: 60vw;
@@ -77,7 +77,7 @@ nav {
     margin: 5px 15px;
 }
 .discografia {
-    margin: 60px 40px;
+    width: 100%;
     font-family: 'Syne Mono', monospace;
     text-transform: uppercase;
 }
@@ -90,6 +90,9 @@ nav {
 .disc_alb {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+
 }
 
 .alb1, .alb4, .alb2, .alb3, .alb6, .alb5 {
@@ -98,10 +101,10 @@ nav {
     height: 35vh;
     margin: 20px;
 }
-.alb1, .alb4, .alb2, .alb3, .alb6, .alb5 p {
-    margin-top: 0;
-    margin-bottom: 10px;
-    margin-left: 43px;
+.discografia p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .alb6:hover {
     width: 35vw;
@@ -153,16 +156,18 @@ footer p {
 }
 .footer_span {
     font-size: 20px;
-    margin: 10px 50px 5px 0px;
     width: 30vw;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     cursor: pointer;
 }
 
 @media screen and (max-width: 320px) {
     header {
-        height: 20%;
+        position: fixed;
+        height: 140px;
+        width: 100vw;
     }
     
     /* .nav-menu {
@@ -172,29 +177,30 @@ footer p {
         margin: -1px -39px -30px -50px;
         width: 40px;
     } */
-    .btn-menu {
+    /* .btn-menu {
         color: white;
         display: block;
         padding: 0px;
         text-decoration: none;
-    }
+    } */
     [class^="icon-menu"], [class*=" icon-menu"] {
-        font-size: 50px;
+        font-size: 30px;
         color: #ffffff;
         text-decoration: none;
+        display: inline;
     }
     header .logo {
         z-index: 60;
-    }
-    /* nav {
-        display: none;
-    } */
-    nav {
-        width: 80%;
-        height: 100%;
-        margin: 55px 0px 0px -80px;
+        margin: 0;
+        height: 140px;
         position: fixed;
+    }
+    
+    nav {
+        width: 85vw;
+        margin-top: 23px;
         z-index: 80;
+        margin-left: 0;
         /* background-color: rgba(0, 0, 0, 0)0, 0, 0, 0.315); */
     }
     .list_nav {
@@ -203,24 +209,61 @@ footer p {
     #me_nu:checked ~ .list_nav {
         display: block;
         height: 100%;
-        width: 100%;
-        max-width: 430px;
+        width: 360px;
         font-weight: bold;
         font-size: larger;
-        margin-left: 40px;
-        margin-top: 56px;
+        margin-left: 0px;
+        margin-top: 50px;
         
-    }
-    #me_nu {
-        display: none;
     }
     header nav .list_nav li {
         display:flex;
         border-bottom: 2px solid #a9a9a9;
-        height: 140px;
-        font-size: 40px;
+        height: 84px;
+        font-size: 30px;
         align-items: flex-end;
         background-color: black;
-        padding: 30px;
+        padding: 30px 30px 0px 10px;
     }
-    
+    .portada {
+        width: 100vw;
+    }
+    .img_port {
+        width: 100%;
+        min-width: 320px;
+    }
+    .biografia {
+        width: 100vw;
+        margin: 0;
+        padding: 20px 10px 0px 10px;
+    }
+    .bio {
+        width: 100vw;
+    }
+    .discografia {
+        width: 100vw;
+    } 
+    .disc_alb {
+        width: 100vw;
+    }
+    .alb1, .alb4, .alb2, .alb3, .alb6, .alb5 {
+        width: 100vw;
+        margin: 0px;
+    }
+    .container {
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+        display: block;
+    }
+    footer p {
+        width: 100%;
+        display: inline;
+        margin-left: 70px;
+        font-size: 25px;
+    }
+    footer .footer_span {
+        width: 100vw;
+        margin-bottom: 10px;
+    }
