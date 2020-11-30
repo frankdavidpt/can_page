@@ -21,7 +21,7 @@ header {
     height: 180px;
 }     
 nav {
-    width: 600px;
+    width: 60%;
     height: 165px;    
 }
 #me_nu {
@@ -60,10 +60,14 @@ nav {
     position: relative;
     /* border: 2px  solid white; */
     margin-top: 200px;
-    /* width: 60vw;
-    height: 40vh; */
+    width: 100vw;
     display: flex;
     justify-content: center;
+}
+.img_port {
+    width: 100vw;
+    min-width: 320px;
+    max-width: 1000px;
 }
 .biografia {
     margin: 30px 154px;
@@ -75,24 +79,25 @@ nav {
     text-align: center;
     font-family: 'Syne Mono', monospace;
     margin: 5px 15px;
+    font-size: x-large;
 }
 .discografia {
-    width: 100%;
+    width: 100vw;
     font-family: 'Syne Mono', monospace;
     text-transform: uppercase;
+
 }
 .disc {
     text-align: center;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 30px;
 }
 .disc_alb {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 100%;
-
+    width: 100vw;
 }
 
 .alb1, .alb4, .alb2, .alb3, .alb6, .alb5 {
@@ -143,7 +148,7 @@ nav {
     box-shadow: inset 5em 1em rgb(5, 5, 5);
 }
 .container {
-    width: 50%;
+    width: 50vw;
     max-width: 512px;
 }
 footer {
@@ -161,28 +166,34 @@ footer p {
     justify-content: space-evenly;
     align-items: center;
     cursor: pointer;
+} 
+@media screen and (max-width: 1440px)
+{
+    .biografia {
+        margin: 11vh 14vw;
+    }
+}   
+@media screen and (max-width: 768px) 
+{
+    .list_nav {
+        justify-content: space-between;
+        font-size: medium;
+    }
+    .biografia {
+        margin: 30px 116px;
+    }
+    .bio {
+        font-size: larger;
+        margin: 7px 4px;
+    }
 }
-
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 425px)
+{
     header {
         position: fixed;
         height: 140px;
         width: 100vw;
     }
-    
-    /* .nav-menu {
-        display: inline;
-        padding: 20px;
-        height: 40px;
-        margin: -1px -39px -30px -50px;
-        width: 40px;
-    } */
-    /* .btn-menu {
-        color: white;
-        display: block;
-        padding: 0px;
-        text-decoration: none;
-    } */
     [class^="icon-menu"], [class*=" icon-menu"] {
         font-size: 30px;
         color: #ffffff;
@@ -213,8 +224,7 @@ footer p {
         font-weight: bold;
         font-size: larger;
         margin-left: 0px;
-        margin-top: 50px;
-        
+        margin-top: 50px;  
     }
     header nav .list_nav li {
         display:flex;
@@ -225,12 +235,148 @@ footer p {
         background-color: black;
         padding: 30px 30px 0px 10px;
     }
-    .portada {
+    .biografia {
+        width: 100vw;
+        margin: 0;
+        padding: 20px 10px 0px 10px;
+    }
+    .bio {
+
+    }
+    .container {
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+        display: block;
+    }
+    footer p {
+        width: 100%;
+        display: inline;
+        margin-left: 127px;
+        font-size: 25px;
+    }
+    footer .footer_span {
+        width: 100vw;
+        margin-bottom: 10px;
+    }   
+}
+@media screen and (max-width: 375px)
+{
+    header {
+        position: fixed;
+        height: 140px;
         width: 100vw;
     }
-    .img_port {
+    [class^="icon-menu"], [class*=" icon-menu"] {
+        font-size: 30px;
+        color: #ffffff;
+        text-decoration: none;
+        display: inline;
+    }
+    header .logo {
+        z-index: 60;
+        margin: 0;
+        height: 140px;
+        position: fixed;
+    }
+    
+    nav {
+        width: 85vw;
+        margin-top: 23px;
+        z-index: 80;
+        margin-left: 0;
+        /* background-color: rgba(0, 0, 0, 0)0, 0, 0, 0.315); */
+    }
+    .list_nav {
+        display: none;
+    }
+    #me_nu:checked ~ .list_nav {
+        display: block;
+        height: 100%;
+        width: 360px;
+        font-weight: bold;
+        font-size: larger;
+        margin-left: 0px;
+        margin-top: 50px;  
+    }
+    header nav .list_nav li {
+        display:flex;
+        border-bottom: 2px solid #a9a9a9;
+        height: 84px;
+        font-size: 30px;
+        align-items: flex-end;
+        background-color: black;
+        padding: 30px 30px 0px 10px;
+    }
+    .biografia {
+        width: 100vw;
+        margin: 0;
+        padding: 20px 10px 0px 10px;
+    }
+    .container {
         width: 100%;
-        min-width: 320px;
+    }
+    footer {
+        width: 100%;
+        display: block;
+    }
+    footer p {
+        width: 100%;
+        display: inline;
+        margin-left: 95px;
+        font-size: 25px;
+    }
+    footer .footer_span {
+        width: 100vw;
+        margin-bottom: 10px;
+    } 
+}
+@media screen and (max-width: 320px) {
+    header {
+        position: fixed;
+        height: 140px;
+        width: 100vw;
+    }
+    [class^="icon-menu"], [class*=" icon-menu"] {
+        font-size: 30px;
+        color: #ffffff;
+        text-decoration: none;
+        display: inline;
+    }
+    header .logo {
+        z-index: 60;
+        margin: 0;
+        height: 140px;
+        position: fixed;
+    }
+    nav {
+        width: 85vw;
+        margin-top: 23px;
+        z-index: 80;
+        margin-left: 0;
+        /* background-color: rgba(0, 0, 0, 0)0, 0, 0, 0.315); */
+    }
+    .list_nav {
+        display: none;
+    }
+    #me_nu:checked ~ .list_nav {
+        display: block;
+        height: 100%;
+        width: 360px;
+        font-weight: bold;
+        font-size: larger;
+        margin-left: 0px;
+        margin-top: 50px;   
+    }
+    header nav .list_nav li {
+        display:flex;
+        border-bottom: 2px solid #a9a9a9;
+        height: 84px;
+        font-size: 30px;
+        align-items: flex-end;
+        background-color: black;
+        padding: 30px 30px 0px 10px;
     }
     .biografia {
         width: 100vw;
@@ -239,13 +385,7 @@ footer p {
     }
     .bio {
         width: 100vw;
-    }
-    .discografia {
-        width: 100vw;
     } 
-    .disc_alb {
-        width: 100vw;
-    }
     .alb1, .alb4, .alb2, .alb3, .alb6, .alb5 {
         width: 100vw;
         margin: 0px;
@@ -266,4 +406,5 @@ footer p {
     footer .footer_span {
         width: 100vw;
         margin-bottom: 10px;
-    }
+    } 
+}
